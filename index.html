@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--Así se hace un comentario en html5-->
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: wheat;
+        }
+        input[type=text],
+        select,
+        textarea{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.322);
+            border-radius: 4px ;
+            background-color: white;
+        }
+
+        button{
+            background-color: salmon;
+            border: none;
+            color: white;
+            padding: 12px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+        }
+        
+        input:focus{
+            border: rgba(2, 192, 250, 0.466);
+            border: 3px solid #555;
+        }
+
+        .container{
+            border-radius: 4px;
+            background-color: gray;
+            padding: 18px;
+            width: 500px;
+            margin: auto;
+        }
+
+        label{
+            padding: 12px 12px 12px 0;
+            display: block;
+        }
+
+        select{
+            width: 100%;
+            height: 40px;
+            margin: 8px 0px;
+            border-radius: 4px;
+        }
+
+        ::placeholder{
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulario estilizado con css</h1>
+    <div class="container">
+        <form action="http://localhost3000" method="POST">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
+            <label for="apeliido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido" required>
+            <label for="pais">País</label>
+            <select name="pais" id="pais" required>
+                <option disabled selected hidden>Seleccione</option>
+                <option>Colombia</option>
+                <option>Perú</option>
+                <option>México</option>
+                <option>Venezuela</option>
+            </select>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
